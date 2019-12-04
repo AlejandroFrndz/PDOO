@@ -15,76 +15,77 @@ public class CivitasView extends javax.swing.JFrame {
     
     CivitasJuego juego;
     JugadorPanel jugadorPanel;
-    CasillaPanel[] vistaCasilla;
+    CasillaTableroPanel[] vistaCasilla;
+    int oldActual = 0;
     
     /**
      * Creates new form CivitasView
      */
     public CivitasView() {
         initComponents();
-        vistaCasilla = new CasillaPanel[20];
+        vistaCasilla = new CasillaTableroPanel[20];
         
         jugadorPanel = new JugadorPanel();
         Contenedor_Vista_Jugador.add(jugadorPanel);
-        
-        vistaCasilla[0] = new CasillaPanel();
+                
+        vistaCasilla[0] = new CasillaTableroPanel();
         Panel_C0.add(vistaCasilla[0]);
         
-        vistaCasilla[1] = new CasillaPanel();
+        vistaCasilla[1] = new CasillaTableroPanel();
         Panel_C1.add(vistaCasilla[1]);
         
-        vistaCasilla[2] = new CasillaPanel();
+        vistaCasilla[2] = new CasillaTableroPanel();
         Panel_C2.add(vistaCasilla[2]);
         
-        vistaCasilla[3] = new CasillaPanel();
+        vistaCasilla[3] = new CasillaTableroPanel();
         Panel_C3.add(vistaCasilla[3]);
         
-        vistaCasilla[4] = new CasillaPanel();
+        vistaCasilla[4] = new CasillaTableroPanel();
         Panel_C4.add(vistaCasilla[4]);
         
-        vistaCasilla[5] = new CasillaPanel();
+        vistaCasilla[5] = new CasillaTableroPanel();
         Panel_C5.add(vistaCasilla[5]);
         
-        vistaCasilla[6] = new CasillaPanel();
+        vistaCasilla[6] = new CasillaTableroPanel();
         Panel_C6.add(vistaCasilla[6]);
         
-        vistaCasilla[7] = new CasillaPanel();
+        vistaCasilla[7] = new CasillaTableroPanel();
         Panel_C7.add(vistaCasilla[7]);
         
-        vistaCasilla[8] = new CasillaPanel();
+        vistaCasilla[8] = new CasillaTableroPanel();
         Panel_C8.add(vistaCasilla[8]);
         
-        vistaCasilla[9] = new CasillaPanel();
+        vistaCasilla[9] = new CasillaTableroPanel();
         Panel_C9.add(vistaCasilla[9]);
         
-        vistaCasilla[10] = new CasillaPanel();
+        vistaCasilla[10] = new CasillaTableroPanel();
         Panel_C10.add(vistaCasilla[10]);
         
-        vistaCasilla[11] = new CasillaPanel();
+        vistaCasilla[11] = new CasillaTableroPanel();
         Panel_C11.add(vistaCasilla[11]);
         
-        vistaCasilla[12] = new CasillaPanel();
+        vistaCasilla[12] = new CasillaTableroPanel();
         Panel_C12.add(vistaCasilla[12]);
         
-        vistaCasilla[13] = new CasillaPanel();
+        vistaCasilla[13] = new CasillaTableroPanel();
         Panel_C13.add(vistaCasilla[13]);
         
-        vistaCasilla[14] = new CasillaPanel();
+        vistaCasilla[14] = new CasillaTableroPanel();
         Panel_C14.add(vistaCasilla[14]);
         
-        vistaCasilla[15] = new CasillaPanel();
+        vistaCasilla[15] = new CasillaTableroPanel();
         Panel_C15.add(vistaCasilla[15]);
         
-        vistaCasilla[16] = new CasillaPanel();
+        vistaCasilla[16] = new CasillaTableroPanel();
         Panel_C16.add(vistaCasilla[16]);
         
-        vistaCasilla[17] = new CasillaPanel();
+        vistaCasilla[17] = new CasillaTableroPanel();
         Panel_C17.add(vistaCasilla[17]);
         
-        vistaCasilla[18] = new CasillaPanel();
+        vistaCasilla[18] = new CasillaTableroPanel();
         Panel_C18.add(vistaCasilla[18]);
         
-        vistaCasilla[19] = new CasillaPanel();
+        vistaCasilla[19] = new CasillaTableroPanel();
         Panel_C19.add(vistaCasilla[19]);
         
         repaint();
@@ -98,29 +99,32 @@ public class CivitasView extends javax.swing.JFrame {
     
     public void actualizaVista(){
         jugadorPanel.setJugador(juego.getJugadorActual());
+        vistaCasilla[oldActual].clearActual();
+        vistaCasilla[juego.getIndiceCasillaActual()].setActual();
+        oldActual = juego.getIndiceCasillaActual();
     }
     
     public void setTablero(){
-        vistaCasilla[0].set_casilla(juego.getCasilla(0));
-        vistaCasilla[1].set_casilla(juego.getCasilla(1));
-        vistaCasilla[2].set_casilla(juego.getCasilla(2));
-        vistaCasilla[3].set_casilla(juego.getCasilla(3));
-        vistaCasilla[4].set_casilla(juego.getCasilla(4));
-        vistaCasilla[5].set_casilla(juego.getCasilla(5));
-        vistaCasilla[6].set_casilla(juego.getCasilla(6));
-        vistaCasilla[7].set_casilla(juego.getCasilla(7));
-        vistaCasilla[8].set_casilla(juego.getCasilla(8));
-        vistaCasilla[9].set_casilla(juego.getCasilla(9));
-        vistaCasilla[10].set_casilla(juego.getCasilla(10));
-        vistaCasilla[11].set_casilla(juego.getCasilla(11));
-        vistaCasilla[12].set_casilla(juego.getCasilla(12));
-        vistaCasilla[13].set_casilla(juego.getCasilla(13));
-        vistaCasilla[14].set_casilla(juego.getCasilla(14));
-        vistaCasilla[15].set_casilla(juego.getCasilla(15));
-        vistaCasilla[16].set_casilla(juego.getCasilla(16));
-        vistaCasilla[17].set_casilla(juego.getCasilla(17));
-        vistaCasilla[18].set_casilla(juego.getCasilla(18));
-        vistaCasilla[19].set_casilla(juego.getCasilla(19));
+        vistaCasilla[0].set_casilla_tablero(juego.getCasilla(0));
+        vistaCasilla[1].set_casilla_tablero(juego.getCasilla(1));
+        vistaCasilla[2].set_casilla_tablero(juego.getCasilla(2));
+        vistaCasilla[3].set_casilla_tablero(juego.getCasilla(3));
+        vistaCasilla[4].set_casilla_tablero(juego.getCasilla(4));
+        vistaCasilla[5].set_casilla_tablero(juego.getCasilla(5));
+        vistaCasilla[6].set_casilla_tablero(juego.getCasilla(6));
+        vistaCasilla[7].set_casilla_tablero(juego.getCasilla(7));
+        vistaCasilla[8].set_casilla_tablero(juego.getCasilla(8));
+        vistaCasilla[9].set_casilla_tablero(juego.getCasilla(9));
+        vistaCasilla[10].set_casilla_tablero(juego.getCasilla(10));
+        vistaCasilla[11].set_casilla_tablero(juego.getCasilla(11));
+        vistaCasilla[12].set_casilla_tablero(juego.getCasilla(12));
+        vistaCasilla[13].set_casilla_tablero(juego.getCasilla(13));
+        vistaCasilla[14].set_casilla_tablero(juego.getCasilla(14));
+        vistaCasilla[15].set_casilla_tablero(juego.getCasilla(15));
+        vistaCasilla[16].set_casilla_tablero(juego.getCasilla(16));
+        vistaCasilla[17].set_casilla_tablero(juego.getCasilla(17));
+        vistaCasilla[18].set_casilla_tablero(juego.getCasilla(18));
+        vistaCasilla[19].set_casilla_tablero(juego.getCasilla(19));
     }
 
     /**
@@ -162,64 +166,84 @@ public class CivitasView extends javax.swing.JFrame {
         Titulo.setText("Civitas");
         Titulo.setEnabled(false);
 
+        Panel_C0.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Panel_C0.setEnabled(false);
 
+        Panel_C19.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C19.setEnabled(false);
 
+        Panel_C18.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C18.setEnabled(false);
 
+        Panel_C17.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C17.setEnabled(false);
 
+        Panel_C15.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C15.setEnabled(false);
 
+        Panel_C1.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C1.setEnabled(false);
 
+        Panel_C2.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C2.setEnabled(false);
 
+        Panel_C3.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C3.setEnabled(false);
 
+        Panel_C4.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C4.setEnabled(false);
 
+        Panel_C6.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C6.setEnabled(false);
 
+        Panel_C7.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C7.setEnabled(false);
 
+        Panel_C8.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C8.setEnabled(false);
 
+        Panel_C11.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C11.setEnabled(false);
 
+        Panel_C12.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C12.setEnabled(false);
 
+        Panel_C13.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C13.setEnabled(false);
 
+        Panel_C14.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C14.setEnabled(false);
 
+        Panel_C5.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C5.setEnabled(false);
 
+        Panel_C10.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C10.setEnabled(false);
 
+        Panel_C16.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C16.setEnabled(false);
 
+        Panel_C9.setBackground(new java.awt.Color(254, 254, 254));
         Panel_C9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Panel_C9.setEnabled(false);
 
@@ -233,47 +257,52 @@ public class CivitasView extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(Contenedor_Vista_Jugador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(450, 450, 450)
-                                .addComponent(Titulo))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(448, 448, 448)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(Panel_C19, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addComponent(Panel_C0, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addComponent(Panel_C18, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addComponent(Panel_C17, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addComponent(Panel_C15, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addComponent(Panel_C14, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(Panel_C6, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addComponent(Panel_C7, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addComponent(Panel_C8, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Panel_C1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Panel_C2, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Panel_C3, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Panel_C4, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Panel_C5, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Panel_C16, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Panel_C11, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Panel_C10, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Panel_C12, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Panel_C9, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
-                                    .addComponent(Panel_C13, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(450, 450, 450)
+                        .addComponent(Titulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 748, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Panel_C0, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Panel_C1, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Panel_C2, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Panel_C3, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Panel_C4, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Panel_C5, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Panel_C15, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                            .addComponent(Panel_C14, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                            .addComponent(Panel_C17, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                            .addComponent(Panel_C18, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                            .addComponent(Panel_C19, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Panel_C16, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Panel_C11, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Panel_C10, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Panel_C12, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Panel_C9, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(510, 510, 510)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Panel_C6, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                    .addComponent(Panel_C13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                    .addComponent(Panel_C7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                    .addComponent(Panel_C8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))))))
+                .addGap(312, 312, 312))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Panel_C0, Panel_C1, Panel_C10, Panel_C11, Panel_C12, Panel_C13, Panel_C14, Panel_C15, Panel_C16, Panel_C17, Panel_C18, Panel_C19, Panel_C2, Panel_C3, Panel_C4, Panel_C5, Panel_C6, Panel_C7, Panel_C8, Panel_C9});
@@ -282,43 +311,41 @@ public class CivitasView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Titulo)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Contenedor_Vista_Jugador, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(Panel_C0, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                                .addComponent(Panel_C2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
-                            .addComponent(Panel_C3, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                            .addComponent(Panel_C4, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                            .addComponent(Panel_C5, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                            .addComponent(Panel_C1, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Panel_C19, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
-                    .addComponent(Panel_C6, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
+                    .addComponent(Panel_C0, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C2, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C3, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C4, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C5, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C1, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Panel_C6, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C19, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Panel_C18, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(Panel_C7, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
+                    .addComponent(Panel_C18, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C7, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Panel_C17, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(Panel_C8, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
+                    .addComponent(Panel_C17, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C8, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Panel_C15, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(Panel_C13, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
+                    .addComponent(Panel_C15, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C13, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Panel_C14, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(Panel_C9, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(Panel_C12, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(Panel_C10, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(Panel_C11, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(Panel_C16, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
-                .addContainerGap(552, Short.MAX_VALUE))
+                    .addComponent(Panel_C14, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C9, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C12, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C10, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C11, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(Panel_C16, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {Panel_C0, Panel_C1, Panel_C10, Panel_C11, Panel_C12, Panel_C13, Panel_C14, Panel_C15, Panel_C16, Panel_C17, Panel_C18, Panel_C19, Panel_C2, Panel_C3, Panel_C4, Panel_C5, Panel_C6, Panel_C7, Panel_C8, Panel_C9});

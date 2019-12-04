@@ -29,6 +29,18 @@ public class Civitas {
         nombres = capturador.getNombres();
         
         CivitasJuego juego = new CivitasJuego(nombres);
+        
+        juego.getJugadorActual().numCasillaActual = 1;
+        Casilla_Calle casilla_actual = (Casilla_Calle)juego.getCasillaActual();
+        juego.getJugadorActual().comprar(casilla_actual.getTituloPropiedad());
+        
+        juego.getJugadorActual().numCasillaActual = 2;
+        casilla_actual = (Casilla_Calle)juego.getCasillaActual();
+        juego.getJugadorActual().comprar(casilla_actual.getTituloPropiedad());
+        
+        juego.getJugadorActual().numCasillaActual = 3;
+        casilla_actual = (Casilla_Calle)juego.getCasillaActual();
+        juego.getJugadorActual().comprar(casilla_actual.getTituloPropiedad());
                 
         Controlador controlador = new Controlador(juego, vista);
         
