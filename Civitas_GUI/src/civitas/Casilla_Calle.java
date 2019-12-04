@@ -55,4 +55,8 @@ public class Casilla_Calle extends Casilla {
         }
     }
     
+    public float get_importe(){
+        return importe;
+    }
+    
 }

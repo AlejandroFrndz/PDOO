@@ -39,4 +39,8 @@ public class Casilla_Impuesto extends Casilla{
         String cadena = nombre + "\n Importe: " + importe;        
         return cadena;
     }
+    
+    public float get_importe(){
+        return importe;
+    }
 }

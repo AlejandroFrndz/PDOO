@@ -195,5 +195,9 @@ public class CivitasJuego {
         
         return res;
     }
+    
+    public Casilla getCasilla(int i){
+        return tablero.getCasilla(i);
+    }
 }
 

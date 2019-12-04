@@ -29,11 +29,13 @@ public class Civitas {
         nombres = capturador.getNombres();
         
         CivitasJuego juego = new CivitasJuego(nombres);
-        
+                
         Controlador controlador = new Controlador(juego, vista);
         
         vista.setCivitasJuego(juego);
         vista.actualizaVista();
+        vista.setTablero();
+
     }
     
 }
