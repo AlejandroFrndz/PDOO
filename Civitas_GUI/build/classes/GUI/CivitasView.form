@@ -40,19 +40,6 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="Panel_C0" linkSize="1" pref="120" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Panel_C1" linkSize="1" pref="120" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Panel_C2" linkSize="1" pref="120" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Panel_C3" linkSize="1" pref="120" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Panel_C4" linkSize="1" pref="120" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Panel_C5" linkSize="1" pref="120" max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="Panel_C15" linkSize="1" pref="120" max="32767" attributes="0"/>
@@ -85,6 +72,27 @@
                           </Group>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="Panel_C0" linkSize="1" pref="120" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                              <Component id="jPanel1" min="-2" pref="469" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="Panel_C1" linkSize="1" pref="120" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel_C2" linkSize="1" pref="120" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel_C3" linkSize="1" pref="120" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel_C4" linkSize="1" pref="120" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel_C5" linkSize="1" pref="120" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
           </Group>
@@ -98,43 +106,48 @@
               <Component id="Contenedor_Vista_Jugador" min="-2" pref="187" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="Panel_C0" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C2" linkSize="2" alignment="1" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C3" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C4" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C5" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C1" linkSize="2" pref="95" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Panel_C6" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C19" linkSize="2" pref="95" max="32767" attributes="0"/>
+                  <Component id="Panel_C0" linkSize="2" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C2" linkSize="2" alignment="1" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C3" linkSize="2" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C4" linkSize="2" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C5" linkSize="2" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C1" linkSize="2" pref="100" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Panel_C18" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C7" linkSize="2" pref="95" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Panel_C6" linkSize="2" pref="100" max="32767" attributes="0"/>
+                          <Component id="Panel_C19" linkSize="2" pref="100" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Panel_C18" linkSize="2" pref="100" max="32767" attributes="0"/>
+                          <Component id="Panel_C7" linkSize="2" pref="100" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Panel_C17" linkSize="2" pref="100" max="32767" attributes="0"/>
+                          <Component id="Panel_C8" linkSize="2" pref="100" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Panel_C15" linkSize="2" pref="100" max="32767" attributes="0"/>
+                          <Component id="Panel_C13" linkSize="2" pref="100" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jPanel1" pref="418" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Panel_C17" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C8" linkSize="2" pref="95" max="32767" attributes="0"/>
+                  <Component id="Panel_C14" linkSize="2" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C9" linkSize="2" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C12" linkSize="2" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C10" linkSize="2" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C11" linkSize="2" pref="100" max="32767" attributes="0"/>
+                  <Component id="Panel_C16" linkSize="2" pref="100" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Panel_C15" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C13" linkSize="2" pref="95" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Panel_C14" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C9" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C12" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C10" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C11" linkSize="2" pref="95" max="32767" attributes="0"/>
-                  <Component id="Panel_C16" linkSize="2" pref="95" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace pref="215" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -164,7 +177,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -182,7 +197,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -197,7 +214,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -212,7 +231,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -227,7 +248,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -242,7 +265,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -257,7 +282,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -272,7 +299,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -287,7 +316,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -302,7 +333,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -317,7 +350,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -332,7 +367,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -347,7 +384,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -362,7 +401,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -377,7 +418,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -392,7 +435,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -407,7 +452,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -422,7 +469,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -437,7 +486,9 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
@@ -452,13 +503,57 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
+            <LineBorder>
+              <Color PropertyName="color" blue="1f" green="8f" red="f4" type="rgb"/>
+            </LineBorder>
           </Border>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="b0" green="d7" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                  <Component id="CIVITAS" min="-2" pref="207" max="-2" attributes="0"/>
+                  <EmptySpace pref="134" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+                  <Component id="CIVITAS" min="-2" pref="127" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="CIVITAS">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="36" style="3"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="CIVITAS"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="CIVITAS"/>
+          </AccessibilityProperties>
+        </Component>
+      </SubComponents>
     </Container>
   </SubComponents>
 </Form>
