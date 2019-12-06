@@ -78,12 +78,15 @@ public class JugadorPanel extends javax.swing.JPanel {
         propiedades = new javax.swing.JPanel();
 
         Nombre.setText("Nombre");
+        Nombre.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         Nombre.setEnabled(false);
 
         Saldo.setText("Saldo");
+        Saldo.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         Saldo.setEnabled(false);
 
         Encarcelado.setText("true");
+        Encarcelado.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         Encarcelado.setEnabled(false);
         Encarcelado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +95,7 @@ public class JugadorPanel extends javax.swing.JPanel {
         });
 
         Especulador.setText("No");
+        Especulador.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         Especulador.setEnabled(false);
 
         Label_Name.setText("Nombre");

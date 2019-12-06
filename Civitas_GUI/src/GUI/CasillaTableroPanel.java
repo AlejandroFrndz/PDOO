@@ -5,6 +5,7 @@
  */
 package GUI;
 import civitas.*;
+import java.awt.Color;
 
 /**
  *
@@ -50,11 +51,13 @@ public class CasillaTableroPanel extends javax.swing.JPanel {
     }
     
     public void clearActual(){
-        Is_Actual.setVisible(false);
+        this.setBackground(Color.WHITE);
+        //Is_Actual.setVisible(false);
     }
     
     public void setActual(){
-        Is_Actual.setVisible(true);
+        this.setBackground(Color.DARK_GRAY);
+        //Is_Actual.setVisible(true);
     }
 
     /**
@@ -71,11 +74,14 @@ public class CasillaTableroPanel extends javax.swing.JPanel {
         Is_Actual = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(254, 254, 254));
+        setPreferredSize(new java.awt.Dimension(109, 70));
 
         Nombre.setText("jTextField1");
+        Nombre.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         Nombre.setEnabled(false);
 
         Precio.setText("jTextField1");
+        Precio.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         Precio.setEnabled(false);
         Precio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

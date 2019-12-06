@@ -67,16 +67,28 @@ public class PropiedadPanel extends javax.swing.JPanel {
         Label_Hoteles.setEnabled(false);
 
         nombre.setText("jTextField1");
+        nombre.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         nombre.setEnabled(false);
+        nombre.setSelectedTextColor(new java.awt.Color(1, 1, 1));
+        nombre.setSelectionColor(new java.awt.Color(1, 1, 0));
 
         num_casas.setText("jTextField2");
+        num_casas.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         num_casas.setEnabled(false);
+        num_casas.setSelectedTextColor(new java.awt.Color(1, 1, 1));
+        num_casas.setSelectionColor(new java.awt.Color(17, 5, 0));
 
         num_hoteles.setText("jTextField3");
+        num_hoteles.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         num_hoteles.setEnabled(false);
+        num_hoteles.setSelectedTextColor(new java.awt.Color(1, 1, 1));
+        num_hoteles.setSelectionColor(new java.awt.Color(1, 1, 0));
 
         hipotecada.setText("jTextField4");
+        hipotecada.setDisabledTextColor(new java.awt.Color(1, 1, 1));
         hipotecada.setEnabled(false);
+        hipotecada.setSelectedTextColor(new java.awt.Color(1, 1, 1));
+        hipotecada.setSelectionColor(new java.awt.Color(17, 5, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

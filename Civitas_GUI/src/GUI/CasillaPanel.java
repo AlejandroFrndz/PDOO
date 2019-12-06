@@ -36,6 +36,7 @@ public class CasillaPanel extends javax.swing.JPanel {
             PropiedadPanel vistaPropiedad = new PropiedadPanel();
             vistaPropiedad.setPropiedad(casi.getTituloPropiedad());
             vistaPropiedad.setVisible(true);
+            
         }
         
         if(cas.getClass().getName().equals(Casilla_Impuesto.class.getName())){
@@ -61,13 +62,18 @@ public class CasillaPanel extends javax.swing.JPanel {
 
         Nombre = new javax.swing.JTextField();
         Precio = new javax.swing.JTextField();
-        Propiedad_Panel = new javax.swing.JPanel();
+
+        setOpaque(false);
 
         Nombre.setText("jTextField1");
         Nombre.setEnabled(false);
+        Nombre.setOpaque(false);
+        Nombre.setSelectionColor(new java.awt.Color(1, 1, 1));
 
         Precio.setText("jTextField1");
         Precio.setEnabled(false);
+        Precio.setOpaque(false);
+        Precio.setSelectionColor(new java.awt.Color(1, 1, 1));
         Precio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PrecioActionPerformed(evt);
@@ -79,15 +85,10 @@ public class CasillaPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(177, 177, 177)
-                        .addComponent(Propiedad_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(139, 139, 139)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(153, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -96,9 +97,7 @@ public class CasillaPanel extends javax.swing.JPanel {
                 .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(Propiedad_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 93, Short.MAX_VALUE))
+                .addGap(0, 153, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -110,6 +109,5 @@ public class CasillaPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Nombre;
     private javax.swing.JTextField Precio;
-    private javax.swing.JPanel Propiedad_Panel;
     // End of variables declaration//GEN-END:variables
 }
