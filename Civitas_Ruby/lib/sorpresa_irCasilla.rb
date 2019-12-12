@@ -14,7 +14,7 @@ module Civitas
     def aplicarAJugador(actual, todos)
       if(jugadorCorrecto(actual,todos))
         informe(actual, todos)
-        casillaActual = todos[actual].getNumCasillaActual()
+        casillaActual = todos[actual].numCasillaActual
         tirada = @tablero.calcularTirada(casillaActual, @valor)
         @tablero.nuevaPosicion(casillaActual, tirada)
         #recibeJugador por implementar

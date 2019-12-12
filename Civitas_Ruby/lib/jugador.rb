@@ -7,7 +7,7 @@ require_relative 'diario.rb'
 module Civitas
   class Jugador
     
-    attr_reader :nombre, :numCasillaActual, :propiedades, :puedeComprar, :saldo , :encarcelado
+    attr_reader :nombre, :numCasillaActual, :propiedades, :puedeComprar, :saldo , :encarcelado, :puedoComprar, :salvoconducto
     
     @@CASASMAX = 4
     @@CASASPORHOTEL = 4
@@ -29,6 +29,7 @@ module Civitas
     def self.copia(orig)
       jugador = new(orig.nombre)
       jugador.from(orig)
+      return jugador
     end
     
     def from(orig)
@@ -406,7 +407,7 @@ module Civitas
     end
     
     private :existeLaPropiedad, :perderSalvoConducto, :puedeSalirCarcelPagando, :puedoEdificarCasa, :puedoEdificarHotel, :puedoGastar
-    protected :debeSerEncarcelado,  :saldo, :from #volver a colocar nombre :propiedades, poner a protected supuestamente
+    protected :debeSerEncarcelado,  :saldo #:from #volver a colocar nombre :propiedades, poner a protected supuestamente
     private_class_method :getCasasMax, :getHotelesMax, :getPrecioLibertad, :getPremioPasoPorSalida
   end
 end
