@@ -45,8 +45,10 @@ public class Civitas {
         Controlador controlador = new Controlador(juego, vista);
         
         vista.setCivitasJuego(juego);
-        vista.actualizaVista();
         vista.setTablero();
+        vista.mostrarSiguienteOperacion(OperacionesJuego.COMPRAR);
+        //vista.actualizaVista();
+        
 
     }
     

@@ -50,7 +50,7 @@ public class CivitasJuego {
         tablero.añadeCasilla(new Casilla_Calle(new TituloPropiedad("Oneplus", 50f, 1.75f, 350f, 700f, 500f)));      //5
         tablero.añadeCasilla(new Casilla_Sorpresa(mazo, "Sorpresa"));                                               //6
         tablero.añadeCasilla(new Casilla_Calle(new TituloPropiedad("Tencent", 70f, 1.75f, 450f, 900f, 500f)));      //7
-        tablero.añadeCasilla(new Casilla_Impuesto(1000f, "Sociedades"));                                            //8
+        tablero.añadeCasilla(new Casilla_Impuesto(1000f, "Impuesto"));                                            //8
         tablero.añadeCasilla(new Casilla_Calle(new TituloPropiedad("SpaceX", 70f, 1.75f, 450f, 900f, 500f)));       //9
         tablero.añadeCasilla(new Casilla_Calle(new TituloPropiedad("Facebook", 90f, 1.75f, 550f, 1100f, 750f)));    //10
         tablero.añadeCasilla(new Casilla_Sorpresa(mazo, "Sorpresa"));                                               //11
