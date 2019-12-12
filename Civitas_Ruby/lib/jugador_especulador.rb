@@ -44,7 +44,7 @@ module Civitas
         return false
       else
         if !tieneSalvoconducto()
-          if @saldo > @finza
+          if @saldo > @fianza
             paga(@fianza)
             return false;
           end
@@ -69,8 +69,8 @@ module Civitas
      
      def to_s()
       cadena = "#{@nombre} (Especulador) Casilla Actual: #{@numCasillaActual} \nSaldo: #{@saldo} \nPropiedades: "
-      if(!@propiedades.empty? && @propiedades != nil)
-        puts "\n LA LONGITUD RESPUESTA A SI ES EMPTY ES #{@propiedades.empty?} y la longitud es #{@propiedades ==  nil} y el primer elemento es #{@propiedades[0].nombre}" 
+      if(!@propiedades.empty?)# && @propiedades != nil)
+        #puts "\n LA LONGITUD RESPUESTA A SI ES EMPTY ES #{@propiedades.empty?} y la longitud es #{@propiedades ==  nil} y el primer elemento es #{@propiedades[0].nombre}" 
         for i in @propiedades
             cadena += "#{i.nombre}, "
         end

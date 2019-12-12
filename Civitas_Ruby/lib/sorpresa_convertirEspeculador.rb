@@ -12,11 +12,11 @@ module Civitas
     end
     
     def aplicarAJugador(actual, todos)
-      nuevo = Jugador_Especulador.nuevoEspeculador(todos[actual],@fianza)
+      @nuevo = Jugador_Especulador.nuevoEspeculador(todos[actual],@fianza)
       
            
       todos.delete_at(actual)
-      todos.insert(actual, nuevo)
+      todos.insert(actual, @nuevo)
       
       informe(actual, todos)
     end
@@ -26,8 +26,8 @@ module Civitas
        indice = actual
       if(jugadorCorrecto(actual,todos))
         
-        puts "Valor de ACTUAL ES: #{@nombre}"
-        cadena = "#{@nombre} se ha convertido en especulador"
+        puts "Valor de ACTUAL ES: #{@nuevo.nombre}"
+        cadena = "#{@nuevo.nombre} se ha convertido en especulador"
         Diario.instance.ocurre_evento(cadena)
 
       end

@@ -7,7 +7,7 @@ require_relative 'diario.rb'
 module Civitas
   class Jugador
     
-    attr_reader :nombre, :numCasillaActual, :propiedades, :puedeComprar, :saldo , :encarcelado, :puedoComprar, :salvoconducto
+    attr_reader :nombre, :numCasillaActual, :propiedades, :puedeComprar, :saldo , :encarcelado, :puedeComprar, :salvoconducto
     
     @@CASASMAX = 4
     @@CASASPORHOTEL = 4
@@ -35,12 +35,12 @@ module Civitas
     def from(orig)
       @nombre = orig.nombre
       @propiedades = []
-      for i in (0..orig.propiedades.length)
+      for i in (0..orig.propiedades.length-1)
         @propiedades.push(orig.propiedades[i])
       end
       @encarcelado = orig.encarcelado
       @numCasillaActual = orig.numCasillaActual
-      @puedoComprar = orig.puedoComprar
+      @puedeComprar = orig.puedeComprar
       @saldo = orig.saldo
       @salvoconducto = orig.salvoconducto
     end
