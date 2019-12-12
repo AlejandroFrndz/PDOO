@@ -8,16 +8,26 @@ require_relative "jugador.rb"
 module Civitas
   class Jugador_Especulador < Jugador
     @@FACTORESPECULADOR = 2
-    def initialize(original, fian)
-      Jugador.copia(original) #como coño asiganamos esto a self
-      @FIANZA = fian
-      actualizarPropietarios()
+    def initialize(fianza)
+       @fianza = fianza
+    end
+    
+    def self.nuevoEspeculador(jugador,fianza)
+      jugador_especulador = new(fianza)
+      jugador_especulador.from(jugador)
+      if(@propiedades != nil)
+        jugador_especulador.actualizarPropietarios()
+      end
+      
+      return jugador_especulador
     end
     
     def actualizarPropietarios()
-      for i in @propiedades
-        i.actualizarPropietarioPorConversion(self)        
-      end
+       
+        for i in @propiedades
+            i.actualizarPropietarioPorConversion(self) 
+        end
+      
     end
     
     def puedoEdificarCasa(propiedad)
@@ -58,10 +68,11 @@ module Civitas
      end
      
      def to_s()
-      cadena = "#{@nombre} \n (Especulador) Casilla Actual: #{@numCasillaActual} \nSaldo: #{@saldo} \nPropiedades: "
-      if(!@propiedades.empty?)
-        for i in (0..@propiedades.length-1)
-          cadena += "#{@propiedades[i].nombre}, "
+      cadena = "#{@nombre} (Especulador) Casilla Actual: #{@numCasillaActual} \nSaldo: #{@saldo} \nPropiedades: "
+      if(!@propiedades.empty? && @propiedades != nil)
+        puts "\n LA LONGITUD RESPUESTA A SI ES EMPTY ES #{@propiedades.empty?} y la longitud es #{@propiedades ==  nil} y el primer elemento es #{@propiedades[0].nombre}" 
+        for i in @propiedades
+            cadena += "#{i.nombre}, "
         end
       else
         cadena += "Ninguna"

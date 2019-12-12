@@ -12,14 +12,9 @@ module Civitas
     end
     
     def aplicarAJugador(actual, todos)
-      nuevo = Jugador_Especulador.new(todos[actual], @fianza)
-      if(nuevo.propiedades != nil)
-        for i in 0..nuevo.propiedades.length-1
-          nuevo.getPropiedades()[i].actualizaPropietarioPorConversion(nuevo)
-        end
-      end
+      nuevo = Jugador_Especulador.nuevoEspeculador(todos[actual],@fianza)
       
-      
+           
       todos.delete_at(actual)
       todos.insert(actual, nuevo)
       
