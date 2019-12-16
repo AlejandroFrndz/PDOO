@@ -7,6 +7,7 @@ package GUI;
 
 import civitas.*;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 /**
  *
  * @author alejandro
@@ -155,6 +156,19 @@ public class CivitasView extends javax.swing.JFrame {
     void mostrarEventos(){
         DiarioDialog diariod = new DiarioDialog(this);
         diariod.setVisible(true);
+    }
+    
+    Respuestas comprar(){
+        int opcion = JOptionPane.showConfirmDialog(null, "¿Quieres comprar la calle actual?", "Compra", JOptionPane.YES_NO_OPTION);
+        return Respuestas.values()[opcion];
+    }
+    
+    SalidasCarcel salirCarcel(){
+        String[] opciones = {"PAGANDO,TIRANDO"};
+        
+        int respuesta= JOptionPane.showOptionDialog(null, "¿Cómo quieres salir de la cárcel?", "Salir de la cárcel", 
+        JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,null, opciones, opciones[0]);
+        return SalidasCarcel.values()[respuesta];
     }
 
     /**
