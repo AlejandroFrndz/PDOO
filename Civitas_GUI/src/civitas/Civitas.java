@@ -20,7 +20,7 @@ public class Civitas {
     public static void main(String[] args) {
         CivitasView vista = new CivitasView();
         Dado.createInstance(vista);
-        Dado.getInstance().setDebug(true);
+        Dado.getInstance().setDebug(false);
         
         CapturaNombres capturador = new CapturaNombres(vista,true);
         
@@ -30,7 +30,7 @@ public class Civitas {
         
         CivitasJuego juego = new CivitasJuego(nombres);
         
-        juego.getJugadorActual().numCasillaActual = 1;
+        /*juego.getJugadorActual().numCasillaActual = 1;
         Casilla_Calle casilla_actual = (Casilla_Calle)juego.getCasillaActual();
         juego.getJugadorActual().comprar(casilla_actual.getTituloPropiedad());
         
@@ -40,7 +40,7 @@ public class Civitas {
         
         juego.getJugadorActual().numCasillaActual = 3;
         casilla_actual = (Casilla_Calle)juego.getCasillaActual();
-        juego.getJugadorActual().comprar(casilla_actual.getTituloPropiedad());
+        juego.getJugadorActual().comprar(casilla_actual.getTituloPropiedad());*/
                 
         Controlador controlador = new Controlador(juego, vista);
         

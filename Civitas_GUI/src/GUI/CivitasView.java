@@ -18,6 +18,7 @@ public class CivitasView extends javax.swing.JFrame {
     JugadorPanel jugadorPanel;
     CasillaTableroPanel[] vistaCasilla;
     int oldActual = 0;
+    GestionarDialog gestionarD = new GestionarDialog(this);
     
     /**
      * Creates new form CivitasView
@@ -96,7 +97,15 @@ public class CivitasView extends javax.swing.JFrame {
         repaint();
         revalidate();
     }
-    
+    public void gestionar(){
+            
+        gestionarD = new GestionarDialog(this);
+        gestionarD.gestionar(juego.getJugadorActual());
+        gestionarD.pack();
+        gestionarD.repaint();
+        gestionarD.revalidate();
+        gestionarD.setVisible(true);
+    }
     public void setCivitasJuego(CivitasJuego game){
         juego = game;
         setVisible(true);
@@ -119,7 +128,7 @@ public class CivitasView extends javax.swing.JFrame {
             TextArea_Ranking.setText(cadena);
         }
         
-        mostrarEventos();
+        gestionar();
         
         repaint();
         revalidate();
