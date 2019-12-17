@@ -73,7 +73,8 @@ public class Jugador_Especulador extends Jugador{
         return result;
     }
     
-    private Boolean debeSerEncarcelado(){
+    @Override
+    protected Boolean debeSerEncarcelado(){
         if(encarcelado)
             return false;
         else{

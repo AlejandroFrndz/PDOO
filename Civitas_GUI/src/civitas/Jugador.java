@@ -118,7 +118,7 @@ public class Jugador implements Comparable<Jugador> {
         return propiedad.getNumHoteles() < HotelesMax && saldo >= propiedad.getPrecioEdificar() && propiedades.contains(propiedad) && propiedad.getNumCasas() == CasasMax;
     }
     
-    private Boolean debeSerEncarcelado(){
+    protected Boolean debeSerEncarcelado(){
         if(encarcelado)
             return false;
         else{
