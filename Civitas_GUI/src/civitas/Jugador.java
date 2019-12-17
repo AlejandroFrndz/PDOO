@@ -62,7 +62,7 @@ public class Jugador implements Comparable<Jugador> {
         return saldo <= 0;
     }
     
-    private Boolean existeLaPropiedad(int ip){
+    protected Boolean existeLaPropiedad(int ip){
         return ip >= 0 && ip < propiedades.size();
     }
     

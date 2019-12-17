@@ -31,7 +31,46 @@ public class Jugador_Especulador extends Jugador{
     }
     
     private Boolean puedoEdificarHotel(TituloPropiedad propiedad){
-        return propiedad.getNumHoteles() < HotelesMax*FactorEspeculador && saldo >= propiedad.getPrecioEdificar() && propiedades.contains(propiedad) && propiedad.getNumCasas() == CasasMax;
+        return propiedad.getNumHoteles() < HotelesMax*FactorEspeculador && saldo >= propiedad.getPrecioEdificar() && propiedades.contains(propiedad) && propiedad.getNumCasas() >= CasasMax;
+    }
+    
+    @Override
+    Boolean construirCasa(int ip){
+         Boolean result = false;
+         if(encarcelado)
+             return result;
+         
+         if(!encarcelado && existeLaPropiedad(ip)){
+             TituloPropiedad propiedad = propiedades.get(ip);
+             Boolean puedoEdificarCasa = puedoEdificarCasa(propiedad);
+             
+             if(puedoEdificarCasa){
+                 result = propiedad.construirCasa(this);
+                 Diario.getInstance().ocurreEvento("El jugador " + nombre + " construye una casa en "+ propiedades.get(ip).getNombre());
+             }
+         }
+         
+         return result;
+    }
+    
+    @Override
+    Boolean construirHotel(int ip){
+        Boolean result = false;
+        if(encarcelado)
+            return result;
+        
+        if(existeLaPropiedad(ip)){
+            TituloPropiedad propiedad = propiedades.get(ip);
+            Boolean puedoEdificarHotel = puedoEdificarHotel(propiedad);            
+            
+            if (puedoEdificarHotel){
+                result = propiedad.construirHotel(this);
+                propiedad.derruirCasas(CasasPorHotel, this);
+                Diario.getInstance().ocurreEvento("El jugador " +nombre+ " construye un hotel en " + propiedades.get(ip).getNombre());
+            }                       
+        }
+        
+        return result;
     }
     
     private Boolean debeSerEncarcelado(){
