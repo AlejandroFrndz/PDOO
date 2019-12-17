@@ -42,30 +42,30 @@ module Civitas
     
     def inicializarTablero(tablero)
       @tablero = Tablero.new(14)
-      @tablero.añadeCasilla(Casilla_Sorpresa.new(@mazo, "Sorpresa"))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Netflix", 10.0, 1.75, 150.0, 300.0, 250.0)))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Intel", 30.0, 1.5, 120.0, 200.0, 150.0)))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Samsung", 50.0, 2.75, 250.0, 310.0, 350.0)))
-      @tablero.añadeJuez()
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Oneplus", 50.0, 2.75, 250.0, 310.0, 350.0)))
-      @tablero.añadeCasilla(Casilla_Sorpresa.new(@mazo, "Sorpresa"))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Tencent", 50.0, 2.75, 250.0, 310.0, 350.0)))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("SpaceX", 50.0, 2.75, 250.0, 310.0, 350.0)))
-      @tablero.añadeCasilla(Casilla_Impuesto.new(1000.0, "Impuesto"))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Facebook", 50.0, 2.75, 250.0, 310.0, 350.0)))
-      @tablero.añadeCasilla(Casilla_Sorpresa.new(@mazo, "Sorpresa"))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Alphabet", 50.0, 2.75, 250.0, 310.0, 350.0)))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Tesla", 50.0, 2.75, 250.0, 310.0, 350.0)))
-      @tablero.añadeCasilla(Casilla_Sorpresa.new(@mazo, "Sorpresa"))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Amazon", 50.0, 2.75, 250.0, 310.0, 350.0)))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Apple", 50.0, 2.75, 250.0, 310.0, 350.0)))
-      @tablero.añadeCasilla(Casilla.new("Silicon valley"))
-      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Microsoft", 50.0, 2.75, 250.0, 310.0, 350.0)))
+      
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Netflix", 10.0, 1.75, 150.0, 300.0, 250.0)))   #1
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Intel", 30.0, 1.5, 120.0, 200.0, 150.0)))      #2
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Samsung", 50.0, 2.75, 250.0, 310.0, 350.0)))   #3
+      @tablero.añadeJuez()                                                                                        #4
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Oneplus", 50.0, 2.75, 250.0, 310.0, 350.0)))   #5
+      @tablero.añadeCasilla(Casilla_Sorpresa.new(@mazo, "Sorpresa"))                                              #6
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Tencent", 50.0, 2.75, 250.0, 310.0, 350.0)))   #7
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("SpaceX", 50.0, 2.75, 250.0, 310.0, 350.0)))    #8
+      @tablero.añadeCasilla(Casilla_Impuesto.new(1000.0, "Impuesto"))                                             #9
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Facebook", 50.0, 2.75, 250.0, 310.0, 350.0)))  #10
+      @tablero.añadeCasilla(Casilla_Sorpresa.new(@mazo, "Sorpresa"))                                              #11
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Alphabet", 50.0, 2.75, 250.0, 310.0, 350.0)))  #12
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Tesla", 50.0, 2.75, 250.0, 310.0, 350.0)))     #13
+      @tablero.añadeCasilla(Casilla_Sorpresa.new(@mazo, "Sorpresa"))                                              #15
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Amazon", 50.0, 2.75, 250.0, 310.0, 350.0)))    #16
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Apple", 50.0, 2.75, 250.0, 310.0, 350.0)))     #17
+      @tablero.añadeCasilla(Casilla.new("Silicon valley"))                                                        #18
+      @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Microsoft", 50.0, 2.75, 250.0, 310.0, 350.0))) #19
 
     end
     
     def inicializarMazoSorpresas(mazo)
-      @mazo.alMazo(Sorpresa_ConvertirEspeculador.new(10000))
+      @mazo.alMazo(Sorpresa_ConvertirEspeculador.new(1000))
       @mazo.alMazo(Sorpresa_pagarCobrar.new(75, "Tu inversion en una startup sale bien, cobra 75€"))
       @mazo.alMazo(Sorpresa_pagarCobrar.new(-75,  "Te han pillado evadiendo impuestos, paga una multa de 75€"))
       @mazo.alMazo(Sorpresa_irACasilla.new(@tablero, 9, "Ve a la sede de #{@tablero.getCasilla(9).nombre}"))

@@ -47,9 +47,10 @@ module Civitas
           if @saldo > @fianza
             paga(@fianza)
             return false;
+          else
+            return true;
           end
-          return true
-         
+          
         else
           perderSalvoConducto()
           Diario.instance.ocurre_evento("¡ #{@nombre} se libra de la cárcel!")
@@ -86,6 +87,7 @@ module Civitas
         cadena += "NO"
       end
       cadena += "\n Factor de especulacion: #{@@FACTORESPECULADOR}" 
+      cadena += "\n Fianza: #{@fianza}"
       cadena += "\n Está encarcelado: "
       
       if @encarcelado

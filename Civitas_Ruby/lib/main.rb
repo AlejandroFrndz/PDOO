@@ -24,9 +24,9 @@ require_relative 'controlador.rb'
 
 module Civitas
   nombres = []
-  nombres.push("Nathan")
-  nombres.push("Sully")
-  nombres.push("Sam")
+  #nombres.push("Nathan")
+  #nombres.push("Sully")
+  #nombres.push("Sam")
   nombres.push("Elena")
   
   juego = CivitasJuego.new(nombres)

@@ -79,11 +79,14 @@ module Civitas
           when Operaciones_juego::SALIR_CARCEL
             metodo = @vista.salirCarcel()
             if(metodo == SalidasCarcel::PAGANDO)
-              @vista.juegoModel.salirCarcelPagando()
+              exito = @vista.juegoModel.salirCarcelPagando()
             else
-              @vista.juegoModel.salirCarcelTirando()
+              exito = @vista.juegoModel.salirCarcelTirando()
             end
-            @vista.juegoModel.siguientePasoCompletado(operacion)
+            
+            if(!exito)
+              @vista.juegoModel.siguientePasoCompletado(operacion)
+            end
             
           end
         end

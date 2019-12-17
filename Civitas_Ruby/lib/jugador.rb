@@ -110,9 +110,8 @@ module Civitas
     
     def encarcelar(numCasillaCarcel)
       if debeSerEncarcelado()
-        @encarcelado = true
         moverACasilla(numCasillaCarcel)
-        
+        @encarcelado = true
         Diario.instance.ocurre_evento("#{@nombre} ha sido encarcelado")
       end
       
