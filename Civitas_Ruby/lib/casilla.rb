@@ -3,14 +3,13 @@
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
 
-require_relative "tipo_casilla.rb"
 require_relative "titulo_propiedad.rb"
 require_relative "sorpresa.rb"
 require_relative "mazo_sorpresas"
 
 module Civitas
   class Casilla
-    attr_reader :nombre, :tituloPropiedad #añado tipo para hacer la comprabacion sobre las sorpresas
+    attr_reader :nombre, :tituloPropiedad 
     
     def initialize( nombre = nil)
       @nombre  = nombre;

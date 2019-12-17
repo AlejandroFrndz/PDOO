@@ -3,7 +3,6 @@
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
 
-require_relative 'tipo_casilla.rb'
 require_relative 'estados_juego.rb'
 require_relative 'tablero.rb'
 require_relative 'mazo_sorpresas.rb'
