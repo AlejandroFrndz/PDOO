@@ -2,15 +2,14 @@ module Civitas
   class Sorpresa_porCasaHotel < Sorpresa
     
     def initialize(valor, texto)
-      super()
+      super(texto)
       @valor = valor
-      @texto = texto
     end
     
     def aplicarAJugador(actual, todos)
       if(jugadorCorrecto(actual, todos))
         informe(actual, todos)
-        todos[actual].modificarsaldo(@valor * todos[actual].cantidadCasasHoteles())
+        todos[actual].modificarSaldo(@valor * todos[actual].cantidadCasasHoteles())
       end
     end
     

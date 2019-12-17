@@ -17,7 +17,9 @@ module Civitas
       @tituloPropiedad = nil
     end
 
-
+    def recibeJugador(actual,todos)
+      informe(actual,todos)
+    end
     
     def jugadorCorrecto(actual, todos)
       actual < todos.count() && actual > -1

@@ -10,6 +10,7 @@ require_relative 'gestiones_inmobiliarias.rb'
 require_relative 'diario.rb'
 require_relative 'salidas_carcel.rb'
 require_relative 'vista_textual.rb'
+
 module Civitas
   class Controlador
     def initialize(jue, vist)
@@ -37,7 +38,6 @@ module Civitas
         if(!@vista.juegoModel.finalDelJuego())
           case operacion
           when Operaciones_juego::COMPRAR
-            #comprabacion de que ademas se deba de comprar que sea una calle para saber si se puede comprar
             if(@vista.juegoModel.getCasillaActual().tituloPropiedad != nil)
               if(!@vista.juegoModel.getCasillaActual().tituloPropiedad.tienePropietario())
                 respuesta = @vista.comprar()
@@ -47,7 +47,6 @@ module Civitas
               end
             end
             
-            #comprobacion de la casilla impuesto, la debemos de hacer aqui?
             puts "\n El siguinte paso es #{operacion}\n"
             @vista.juegoModel.siguientePasoCompletado(operacion)
             

@@ -42,7 +42,7 @@ module Civitas
     
     def inicializarTablero(tablero)
       @tablero = Tablero.new(14)
-      
+
       @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Netflix", 10.0, 1.75, 150.0, 300.0, 250.0)))   #1
       @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Intel", 30.0, 1.5, 120.0, 200.0, 150.0)))      #2
       @tablero.añadeCasilla(Casilla_Calle.new(TituloPropiedad.new("Samsung", 50.0, 2.75, 250.0, 310.0, 350.0)))   #3
@@ -65,7 +65,7 @@ module Civitas
     end
     
     def inicializarMazoSorpresas(mazo)
-      @mazo.alMazo(Sorpresa_ConvertirEspeculador.new(1000))
+      @mazo.alMazo(Sorpresa_ConvertirEspeculador.new(1000,""))
       @mazo.alMazo(Sorpresa_pagarCobrar.new(75, "Tu inversion en una startup sale bien, cobra 75€"))
       @mazo.alMazo(Sorpresa_pagarCobrar.new(-75,  "Te han pillado evadiendo impuestos, paga una multa de 75€"))
       @mazo.alMazo(Sorpresa_irACasilla.new(@tablero, 9, "Ve a la sede de #{@tablero.getCasilla(9).nombre}"))
@@ -75,8 +75,8 @@ module Civitas
       @mazo.alMazo(Sorpresa_porCasaHotel.new(-320, "Sube el IBI. Paga 320€ por cada casa y hotel que poseas"))
       @mazo.alMazo(Sorpresa_porJugador.new(250, "Una de tus patentes se ha vuelto muy popular. Recibe 250€ de cada jugador"))
       @mazo.alMazo(Sorpresa_porJugador.new(-250, "Tus competidores presentan una demanda colectiva contra ti y el juez les da la razón. Paga 250€ a cada jugador"))
-      @mazo.alMazo(Sorpresa_irCarcel.new(@tablero))
-      @mazo.alMazo(Sorpresa_salirCarcel.new(@mazo))
+      @mazo.alMazo(Sorpresa_irCarcel.new(@tablero,""))
+      @mazo.alMazo(Sorpresa_salirCarcel.new(@mazo,""))
     end
     
     def actualizarInfo()

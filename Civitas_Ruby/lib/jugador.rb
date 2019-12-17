@@ -68,8 +68,10 @@ module Civitas
     def cantidadCasasHoteles()
       amount = 0
       
-      for i in (0..@propiedades.length)
-        amount += @propiedades[i].cantidadCasasHoteles()
+      if(@propiedades != nil && !@propiedades.empty?)
+        for i in (0..@propiedades.length)
+          amount += @propiedades[i].cantidadCasasHoteles()
+        end
       end
       
       return amount

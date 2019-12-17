@@ -1,26 +1,28 @@
 require_relative 'sorpresa.rb'
+require_relative 'sorpresa_pagarCobrar'
 require_relative 'jugador.rb'
 require_relative 'diario.rb'
 module Civitas
   class Sorpresa_porJugador < Sorpresa
     
     def initialize(valor, texto)
-      super()
+      super(texto)
       @valor = valor
-      @texto = texto
     end
     
-    def aplicarAJugador(actual, todos)
-      if(jugadorCorrecto(actual, todos))
-        informe(actual, todos)
-        pagarcobrar = Sorpresa.newPAGARCOBRAR(Tipo_Sorpresa::PAGARCOBRAR, @valor*-1, "")
-        for i in 0..todos.count() do
-          if(i != actual)
-            pagarcobrar.aplicarAJugador(i, todos)
+      def aplicarAJugador(actual, todos)
+      if jugadorCorrecto(actual,todos)
+        informe(actual,todos)
+        valor_actual = @valor * (todos.size-1)
+        valor_otros = @valor * -1
+        
+        for i in todos
+          if i==todos[actual]
+            i.modificarSaldo(valor_actual)
+          else
+            i.modificarSaldo(valor_otros)
           end
-        end
-        pagarcobrar2 = Sorpresa.newPAGARCOBRAR(Tipo_Sorpresa::PAGARCOBRAR, @valor*(todos.count()-1), "")
-        pagarcobrar2.aplicarAJugador(actual, todos)
+        end       
       end
     end
     

@@ -4,15 +4,15 @@ require_relative 'diario.rb'
 module Civitas
   class Sorpresa_irCarcel < Sorpresa
     
-    def initialize(tablero)
-      super()
+    def initialize(tablero,texto)
+      super(texto)
       @tablero = tablero
     end
     
-    def aplicarAJugador(acutal, todos)
+    def aplicarAJugador(actual, todos)
       if(jugadorCorrecto(actual, todos))
         informe(actual, todos)
-        todos[actual].encarcelar(@tablero.getCarcel())
+        todos[actual].encarcelar(@tablero.numCasillaCarcel)
       end
     end
     

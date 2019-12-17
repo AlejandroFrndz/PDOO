@@ -6,8 +6,8 @@ require_relative 'jugador.rb'
 require_relative 'diario.rb'
 module Civitas
   class Sorpresa_salirCarcel < Sorpresa
-    def initialize(mazo)
-      super()
+    def initialize(mazo,texto)
+      super(texto)
       @mazo = mazo
     end
     
@@ -16,9 +16,9 @@ module Civitas
         informe(actual, todos)
         
         salvoconducto = false;
-        for i in 0..todos.count()
+        for i in todos
           if(!salvoconducto)
-            salvoconducto = todos[i].tieneSalvoConduncto()
+            salvoconducto = i.tieneSalvoconducto()
           end
         end
       

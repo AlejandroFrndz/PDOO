@@ -7,7 +7,7 @@ require_relative 'casilla.rb'
 module Civitas
   class Tablero
     
-    attr_reader :numCasillaCarcel
+    attr_reader :numCasillaCarcel,:casillas
     
     def initialize(n)
       

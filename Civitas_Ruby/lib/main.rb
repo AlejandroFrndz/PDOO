@@ -15,7 +15,6 @@ require_relative 'diario.rb'
 require_relative 'gestor_estados.rb'
 require_relative 'operaciones_juego.rb'
 require_relative 'sorpresa.rb'
-require_relative 'tipo_sorpresa.rb'
 require_relative 'civitas_juego.rb'
 require_relative 'vista_textual.rb'
 require_relative 'controlador.rb'
@@ -24,13 +23,13 @@ require_relative 'controlador.rb'
 
 module Civitas
   nombres = []
-  #nombres.push("Nathan")
-  #nombres.push("Sully")
-  #nombres.push("Sam")
+  nombres.push("Nathan")
+  nombres.push("Sully")
+  nombres.push("Sam")
   nombres.push("Elena")
   
   juego = CivitasJuego.new(nombres)
-  Dado.instance.setDebug(true)
+  Dado.instance.setDebug(false)
   vista = Vista_textual.new()
   controlador = Controlador.new(juego,vista)
   

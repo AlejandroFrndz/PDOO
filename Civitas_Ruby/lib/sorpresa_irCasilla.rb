@@ -5,10 +5,9 @@ module Civitas
   class Sorpresa_irACasilla < Sorpresa
     
     def initialize(tablero, valor, texto)
-      super()
+      super(texto)
       @tablero = tablero
       @valor = valor
-      @texto = texto
     end
     
     def aplicarAJugador(actual, todos)
@@ -16,8 +15,8 @@ module Civitas
         informe(actual, todos)
         casillaActual = todos[actual].numCasillaActual
         tirada = @tablero.calcularTirada(casillaActual, @valor)
-        @tablero.nuevaPosicion(casillaActual, tirada)
-        #recibeJugador por implementar
+        pos = @tablero.nuevaPosicion(casillaActual, tirada)
+        @tablero.casillas[pos].recibeJugador(actual,todos)
       end
     end
     

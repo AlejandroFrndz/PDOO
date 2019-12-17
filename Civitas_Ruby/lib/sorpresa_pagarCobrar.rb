@@ -5,9 +5,8 @@ module Civitas
   class Sorpresa_pagarCobrar < Sorpresa
     
     def initialize(valor, texto)
-      super()
+      super(texto)
       @valor = valor
-      @texto = texto
     end
     
     def aplicarAJugador(actual, todos)

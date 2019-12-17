@@ -6,8 +6,8 @@ require_relative "diario.rb"
 require_relative "jugador.rb"
 module Civitas
   class Sorpresa_ConvertirEspeculador < Sorpresa
-    def initialize(fin)
-      super()
+    def initialize(fin,texto)
+      super(texto)
       @fianza = fin
     end
     
