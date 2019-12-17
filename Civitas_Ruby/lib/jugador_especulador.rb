@@ -36,7 +36,7 @@ module Civitas
     
     
     def puedoEdificarHotel(propiedad)
-      return propiedad.numHoteles < @@HOTELESMAX*@@FACTORESPECULADOR && @saldo >= propiedad.precioEdificar && @propiedades.include?(propiedad) && propiedad.numCasas == @@CASASMAX
+      return propiedad.numHoteles < @@HOTELESMAX*@@FACTORESPECULADOR && @saldo >= propiedad.precioEdificar && @propiedades.include?(propiedad) && propiedad.numCasas >= @@CASASMAX
     end
     
     def debeSerEncarcelado()
@@ -46,6 +46,7 @@ module Civitas
         if !tieneSalvoconducto()
           if @saldo > @fianza
             paga(@fianza)
+            Diario.instance.ocurre_evento("#{@nombre} paga su fianza y no irá a prisión")
             return false;
           else
             return true;
@@ -108,7 +109,6 @@ module Civitas
       return @@HOTELESMAX*@@FACTORESPECULADOR
     end
     
+      private_class_method :new
   end
-  
-  
 end

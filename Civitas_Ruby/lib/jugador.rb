@@ -179,7 +179,7 @@ module Civitas
       if cantidad >= 0
         Diario.instance.ocurre_evento("El saldo de #{@nombre} se ha incrementado #{cantidad}")
       else
-        Diario.instance.ocurre_evento("El saldo de #{@nombre} se ha decrementado #{cantidad}") 
+        Diario.instance.ocurre_evento("El saldo de #{@nombre} se ha decrementado #{-1*cantidad}") 
       end
     end
     
@@ -309,7 +309,7 @@ module Civitas
         
         if(puedoEdificarCasa)
           result = propiedad.construirCasa(self);
-          Diario.instance.ocurre_evento("El jugador #{@nombre} construye casa en la propiedad #{ip}")
+          Diario.instance.ocurre_evento("El jugador #{@nombre} construye casa en la propiedad #{@propiedades[ip].nombre}")
         end
         
       end
@@ -331,7 +331,7 @@ module Civitas
         if(puedoEdificarHotel)
           result = propiedad.construirHotel(self);
           propiedad.derruirCasas(@@CASASPORHOTEL, self)
-          Diario.instance.ocurre_evento("El jugador #{@nombre} construye hotel en la propiedad #{ip}")
+          Diario.instance.ocurre_evento("El jugador #{@nombre} construye hotel en la propiedad #{@propiedades[ip].nombre}")
         end
         
       end
@@ -352,7 +352,7 @@ module Civitas
       end
       
       if(result)
-        Diario.instance.ocurre_evento("El jugador #{@nombre} hipoteca la propiedad #{ip}")
+        Diario.instance.ocurre_evento("El jugador #{@nombre} hipoteca la propiedad #{@propiedades[ip].nombre}")
       end
       
       return result
@@ -375,7 +375,7 @@ module Civitas
         end
       end
       if result
-          Diario.instance.ocurre_evento("El jugador #{@nombre} cancela la hipoteca de #{ip}")
+          Diario.instance.ocurre_evento("El jugador #{@nombre} cancela la hipoteca de #{@propiedades[ip].nombre}")
       end
       return result
     end
@@ -406,7 +406,7 @@ module Civitas
     end
     
     private :existeLaPropiedad, :perderSalvoConducto, :puedeSalirCarcelPagando, :puedoEdificarCasa, :puedoEdificarHotel, :puedoGastar
-    protected :debeSerEncarcelado,  :saldo #:from #volver a colocar nombre :propiedades, poner a protected supuestamente
+    protected :debeSerEncarcelado,  :saldo #:from volver a colocar nombre :propiedades, poner a protected supuestamente
     private_class_method :getCasasMax, :getHotelesMax, :getPrecioLibertad, :getPremioPasoPorSalida
   end
 end
